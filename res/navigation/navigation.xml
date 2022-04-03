@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/expense_tracker_fragment">
+
+    <fragment
+        android:id="@+id/expense_tracker_fragment"
+        android:name="com.example.android.expensetracker.sleeptracker.ExpenseTrackerFragment"
+        android:label="expense_tracker_fragment"
+        tools:layout="@layout/expense_tracker_fragment">
+        <action
+            android:id="@+id/action_expenseTrackerFragment_to_expenseCategoryFragment"
+            app:destination="@id/expense_category_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/expense_category_fragment"
+        android:name="com.example.android.expensetracker.expensecategory.ExpenseCategoryFragment"
+        android:label="expense_category_fragment"
+        tools:layout="@layout/expense_category_fragment">
+        <argument
+            android:name="expenseKey"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_expenseCategoryFragment_to_expenseTrackerFragment"
+            app:destination="@id/expense_tracker_fragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/sleep_tracker_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

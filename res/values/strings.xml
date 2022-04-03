@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Budget Track</string>
+    <string name="sleep_tracker_fragment">SleepTrackerFragment</string>
+    <string name="sleep_quality_fragment">SleepQualityFragment</string>
+
+
+    <string name="clear">Clear</string>
+
+    <string name="cleared_message">All your data is gone forever.</string>
+
+</resources>
